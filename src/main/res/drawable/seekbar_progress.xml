@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fundo da barra -->
+    <item android:id="@android:id/background">
+        <shape>
+            <size android:height="2dp"/>
+            <solid android:color="#222326"/>
+        </shape>
+    </item>
+    <!-- Progresso -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <size android:height="2dp"/>
+                <solid android:color="#E50914"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

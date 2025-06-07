@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F7">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="#2962FF"
+            android:elevation="6dp"
+            android:gravity="center"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Constraint Layout Atividade 3"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/subtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Melhor Texto"
+            android:textColor="#2962FF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titulo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/text_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitulo">
+
+            <TextView
+                android:id="@+id/textoEsquerda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="5dp"
+                android:justificationMode="inter_word"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Mauris hendrerit, quam vitae condimentum porta, turpis ex iaculis est, ut blandit nunc enim vitae ipsum. Donec interdum ante sem. Donec sed rhoncus felis, vitae bibendum nisi. Pellentesque vestibulum feugiat orci non ornare. Morbi aliquet, sapien et imperdiet ullamcorper, lorem neque egestas augue, vel consectetur ante felis ut elit. Sed tempor blandit pharetra. In hac habitasse platea dictumst."
+                android:textColor="#232333"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/textoDireita"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textoDireita"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:justificationMode="inter_word"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc tempor ligula vel massa vulputate, sed fringilla diam cursus. Aliquam tincidunt fringilla nunc id fermentum. Proin eu tortor augue. Suspendisse interdum felis quis justo fringilla, non blandit dui volutpat. In elementum at lorem quis ullamcorper. Mauris feugiat lectus at est commodo, vitae vestibulum erat commodo. Donec condimentum elit vitae purus consectetur pellentesque. Integer non lectus eleifend, condimentum leo et, malesuada dolor."
+                android:textColor="#232333"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/textoEsquerda"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/btnEsquerda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#2962FF"
+            android:text="ESQUERDA"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/btnEmpate"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_container" />
+
+        <Button
+            android:id="@+id/btnEmpate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#2962FF"
+            android:text="EMPATE"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/btnDireita"
+            app:layout_constraintStart_toEndOf="@+id/btnEsquerda"
+            app:layout_constraintTop_toTopOf="@+id/btnEsquerda" />
+
+        <Button
+            android:id="@+id/btnDireita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2962FF"
+            android:text="DIREITA"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnEmpate"
+            app:layout_constraintTop_toTopOf="@+id/btnEsquerda" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
